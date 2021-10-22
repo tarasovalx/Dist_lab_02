@@ -1,4 +1,4 @@
-mvn package
+mvn -X package
 
 hadoop fs -rm airports.csv
 hadoop fs -rm flights.csv
