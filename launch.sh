@@ -12,5 +12,5 @@ export HADOOP_CLASSPATH=./target/lab_02-1.0-SNAPSHOT.jar
 
 
 
-hadoop FlightsJoinApp flights.csv airports.csv output
+hadoop bmstu.ru.FlightsJoinApp flights.csv airports.csv output
 hadoop fs -copyToLocal output ~/labs_output/lab_02
