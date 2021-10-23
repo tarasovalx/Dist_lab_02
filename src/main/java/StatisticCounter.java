@@ -6,7 +6,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
 public class StatisticCounter extends Reducer<AirportWritableComparable, FloatWritable, IntWritable, Text> {
-    private static final String format = "Airport:%s  AVG_DELAY:%f, MIN_DELAY %f, MAX_DELAY:%f";
+    private static final String format = "Airport:%s  AVG_DELAY:%f, MIN_DELAY %f, MAX_DELAY:%f, NUM_FLIGHTS:%d";
 
     @Override
     protected void reduce(AirportWritableComparable key, Iterable<FloatWritable> values, Context context) throws IOException, InterruptedException {
@@ -26,7 +26,7 @@ public class StatisticCounter extends Reducer<AirportWritableComparable, FloatWr
         if (cnt > 0) {
             averageDelay /= cnt;
             context.write(new IntWritable(key.getId()),
-                          new Text(String.format(format, averageDelay, minDelay, maxDelay)));
+                          new Text(String.format(format, key.getId(), averageDelay, minDelay, maxDelay, cnt)));
         }
     }
 }

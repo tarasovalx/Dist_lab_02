@@ -5,11 +5,13 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public class AirportMapper extends Mapper<LongWritable, AirportWritable, AirportWritableComparable, Text> {
+public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableComparable, FloatWritable> {
 
     @Override
-    protected void map(LongWritable key, AirportWritable value, Context context) throws IOException, InterruptedException {
-        context.write(new AirportWritableComparable(value.getId(), Type.AIRPORT),
-                      new Text(value.getName()));
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        Airport data =  new Airport(value.toString());
+
+        context.write(new AirportWritableComparable(data.getId(), Type.AIRPORT),
+                      new FloatWritable());
     }
 }

@@ -1,9 +1,9 @@
 FlightPartitioner.class
+Airport.class
 AirportWritableComparable.class
-AirportWritable.class
+Flight.class
 AirportMapper.class
 FlightsMapper.class
-FlightWritable.class
 FlightsJoinApp.class
 Type.class
 StatisticCounter.class

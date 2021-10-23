@@ -1,9 +1,9 @@
-/home/tarasovalx/labs/Dist_lab_02/src/main/java/AirportWritable.java
 /home/tarasovalx/labs/Dist_lab_02/src/main/java/FlightComparator.java
 /home/tarasovalx/labs/Dist_lab_02/src/main/java/FlightPartitioner.java
 /home/tarasovalx/labs/Dist_lab_02/src/main/java/FlightsMapper.java
 /home/tarasovalx/labs/Dist_lab_02/src/main/java/AirportMapper.java
-/home/tarasovalx/labs/Dist_lab_02/src/main/java/FlightWritable.java
+/home/tarasovalx/labs/Dist_lab_02/src/main/java/Flight.java
 /home/tarasovalx/labs/Dist_lab_02/src/main/java/AirportWritableComparable.java
 /home/tarasovalx/labs/Dist_lab_02/src/main/java/FlightsJoinApp.java
+/home/tarasovalx/labs/Dist_lab_02/src/main/java/Airport.java
 /home/tarasovalx/labs/Dist_lab_02/src/main/java/StatisticCounter.java
