@@ -1,5 +1,8 @@
 mvn -X package
 
+start-dfs.sh
+start-yarn.sh
+
 hadoop fs -rm airports.csv
 hadoop fs -rm flights.csv
 hdfs dfs -rm -r output
