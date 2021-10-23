@@ -15,9 +15,9 @@ public class StatisticCounter extends Reducer<AirportWritableComparable, FloatWr
         float minDelay = Float.MAX_VALUE;
 
         int cnt = 0;
-        for (var delayWritable : values){
+        for (FloatWritable delayWritable : values){
             cnt ++;
-            var delay = delayWritable.get();
+            float delay = delayWritable.get();
             averageDelay += delay;
             minDelay = Math.min(minDelay, delay);
             maxDelay = Math.max(maxDelay, delay);

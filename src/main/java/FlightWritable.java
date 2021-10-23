@@ -28,7 +28,7 @@ public class FlightWritable implements Writable {
     }
 
     public void readFields(DataInput dataInput) throws IOException {
-        var data = dataInput.toString().split(DELIMETER);
+        String[] data = dataInput.toString().split(DELIMETER);
         this.airportId = Integer.parseInt(data[AIRPORT_ID]);
         this.isCancelled = data[IS_CANCELLED] == CANCELLED_FLAG;
         this.delayTime =  Float.parseFloat(data[DELAY_TIME]);

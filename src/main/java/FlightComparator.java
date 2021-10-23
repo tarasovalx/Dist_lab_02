@@ -8,8 +8,6 @@ public class FlightComparator extends WritableComparator {
 
     @Override
     public int compare(WritableComparable a, WritableComparable b) {
-        var x = (AirportWritableComparable)a;
-        var y = (AirportWritableComparable)b;
-        return x.getId() - y.getId();
+        return ((AirportWritableComparable)a).getId() - ((AirportWritableComparable)b).getId();
     }
 }

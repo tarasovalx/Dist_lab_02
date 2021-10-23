@@ -1,0 +1,10 @@
+FlightPartitioner.class
+AirportWritableComparable.class
+AirportWritable.class
+AirportMapper.class
+FlightsMapper.class
+FlightWritable.class
+FlightsJoinApp.class
+Type.class
+StatisticCounter.class
+FlightComparator.class
