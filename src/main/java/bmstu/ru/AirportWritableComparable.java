@@ -1,4 +1,5 @@
-import org.apache.hadoop.io.Writable;
+package bmstu.ru;
+
 import org.apache.hadoop.io.WritableComparable;
 
 import java.io.DataInput;
@@ -12,6 +13,7 @@ enum Type{
 
 public class AirportWritableComparable implements WritableComparable<AirportWritableComparable> {
     private Type type;
+    private String name;
     private int id;
 
     public AirportWritableComparable(){
@@ -22,13 +24,27 @@ public class AirportWritableComparable implements WritableComparable<AirportWrit
         return id;
     }
 
-    public AirportWritableComparable(int id, Type type){
+    public Type getType(){
+        return type;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public AirportWritableComparable(int id, String name, Type type){
         this.id = id;
         this.type = type;
+        this.name = name;
     }
 
     public int compareTo(AirportWritableComparable o) {
-        return o.id - this.id;
+        int x = this.type.ordinal() -o.getType().ordinal();
+        if (x != 0){
+            return x;
+        } else{
+            return o.id - this.id;
+        }
     }
 
     public void write(DataOutput dataOutput) throws IOException {

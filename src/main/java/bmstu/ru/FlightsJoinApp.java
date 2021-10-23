@@ -1,19 +1,19 @@
+package bmstu.ru;
+
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 
 import org.apache.hadoop.mapreduce.Job;
-import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
-import org.apache.hadoop.mapreduce.lib.input.NLineInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 
 public class FlightsJoinApp {
     private static final String usageString = "Usage: WordCountApp <input path> <input path> <output path>";
-    private static final String jobName = "Flights Join";
+    private static final String jobName = "Flights Join App";
 
     public static void main(String[] args) throws Exception {
         if (args.length != 3) {

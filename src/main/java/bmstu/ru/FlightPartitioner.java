@@ -1,5 +1,6 @@
+package bmstu.ru;
+
 import org.apache.hadoop.io.FloatWritable;
-import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Partitioner;
 
 public class FlightPartitioner extends Partitioner<AirportWritableComparable, FloatWritable> {
