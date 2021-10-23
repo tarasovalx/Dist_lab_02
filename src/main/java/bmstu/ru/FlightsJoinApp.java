@@ -30,7 +30,7 @@ public class FlightsJoinApp {
         FileOutputFormat.setOutputPath(job,new Path(args[2]));
 
         job.setMapOutputKeyClass(AirportWritableComparable.class);
-        job.setMapOutputValueClass(FloatWritable.class);
+        job.setMapOutputValueClass(FlightWritable.class);
 
         job.setGroupingComparatorClass(FlightComparator.class);
         job.setPartitionerClass(FlightPartitioner.class);
